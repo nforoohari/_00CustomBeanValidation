@@ -5,22 +5,19 @@ import jakarta.validation.ConstraintValidatorContext;
 
 public class CouponCodeValidator implements ConstraintValidator<CouponCode, String> {
 
-    //todo: logic validation
-    String couponCodePrefix;//OFF70
+    String couponCodePrefix;
 
     @Override
     public void initialize(CouponCode constraintAnnotation) {
-        couponCodePrefix=constraintAnnotation.value();
+        couponCodePrefix = constraintAnnotation.value();
     }
 
     @Override
     public boolean isValid(String value, ConstraintValidatorContext context) {
         boolean result;
-        if(value!=null)
-        {
+        if (value != null) {
             result = value.startsWith(couponCodePrefix);
-        }
-        else
+        } else
             result = false;
         return result;
     }

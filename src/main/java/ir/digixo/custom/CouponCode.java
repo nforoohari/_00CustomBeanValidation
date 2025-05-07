@@ -1,6 +1,5 @@
 package ir.digixo.custom;
 
-
 import jakarta.validation.Constraint;
 import jakarta.validation.Payload;
 
@@ -13,16 +12,13 @@ import java.lang.annotation.Target;
 @Retention(RetentionPolicy.RUNTIME)
 @Constraint(validatedBy = {CouponCodeValidator.class})
 public @interface CouponCode {
-    String message() default "{must start with OFF70}";
 
-    Class<?>[] groups() default { };
+    String message() default "Start with OFF70";
 
-    Class<? extends Payload>[] payload() default { };
+    Class<?>[] groups() default {};
 
-    /**
-     * @return value the element must be lower or equal to
-     */
+    Class<? extends Payload>[] payload() default {};
+
     String value() default "OFF70";
-
 
 }

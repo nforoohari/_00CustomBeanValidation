@@ -23,18 +23,10 @@ public class Product {
     private String regX;
 
     //custom validation
-    @CouponCode(value = "takhfif70", message = "start with takhfif70")
+    @CouponCode(value = "Takhfif70", message = "Start with Takhfif70. ")
     private String couponCode;
 
     public Product() {
-    }
-
-    public String getRegX() {
-        return regX;
-    }
-
-    public void setRegX(String regX) {
-        this.regX = regX;
     }
 
     public Long getId() {
@@ -59,6 +51,14 @@ public class Product {
 
     public void setPrice(BigDecimal price) {
         this.price = price;
+    }
+
+    public String getRegX() {
+        return regX;
+    }
+
+    public void setRegX(String regX) {
+        this.regX = regX;
     }
 
     public String getCouponCode() {
